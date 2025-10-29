@@ -8,27 +8,15 @@ export default function Programs() {
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white border-b border-secondary">
         <div className="container flex items-center justify-between h-16">
-          <Link href="/">
-            <a className="text-2xl font-bold text-primary hover:text-accent transition" style={{ fontFamily: 'Poppins, sans-serif' }}>
-              ELSMITH
-            </a>
+          <Link href="/" className="text-2xl font-bold text-primary hover:text-accent transition" style={{ fontFamily: 'Poppins, sans-serif' }}>
+            ELSMITH
           </Link>
           <div className="hidden md:flex gap-8">
-            <Link href="/">
-              <a className="text-foreground hover:text-accent transition">Home</a>
-            </Link>
-            <Link href="/about">
-              <a className="text-foreground hover:text-accent transition">About</a>
-            </Link>
-            <Link href="/services">
-              <a className="text-foreground hover:text-accent transition">Services</a>
-            </Link>
-            <Link href="/programs">
-              <a className="text-foreground hover:text-accent transition font-bold">Programs</a>
-            </Link>
-            <Link href="/contact">
-              <a className="text-foreground hover:text-accent transition">Contact</a>
-            </Link>
+            <Link href="/" className="text-foreground hover:text-accent transition">Home</Link>
+            <Link href="/about" className="text-foreground hover:text-accent transition">About</Link>
+            <Link href="/services" className="text-foreground hover:text-accent transition">Services</Link>
+            <Link href="/programs" className="text-foreground hover:text-accent transition font-bold">Programs</Link>
+            <Link href="/contact" className="text-foreground hover:text-accent transition">Contact</Link>
           </div>
           <Link href="/contact">
             <Button className="bg-accent hover:bg-accent/90 text-accent-foreground">
@@ -41,9 +29,7 @@ export default function Programs() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary to-blue-900 text-white py-20 md:py-28">
         <div className="container">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6" style={{ fontFamily: 'Poppins, sans-serif' }}>
-            Our Programs
-          </h1>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">Our Programs</h1>
           <p className="text-xl text-blue-100 max-w-3xl">
             Innovative learning and development programs designed to unlock potential and drive organizational success.
           </p>
@@ -58,13 +44,13 @@ export default function Programs() {
               <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg p-12 min-h-80 flex items-center justify-center">
                 <div className="text-center">
                   <Award className="w-24 h-24 text-accent mx-auto mb-4" />
-                  <p className="text-2xl font-bold text-primary" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                  <p className="text-2xl font-bold text-primary">
                     License to Work™
                   </p>
                 </div>
               </div>
               <div>
-                <h2 className="text-4xl font-bold text-primary mb-6" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                <h2 className="text-4xl font-bold text-primary mb-6">
                   License to Work™ Graduate Employability Programme
                 </h2>
                 <p className="text-lg text-foreground mb-6">
@@ -102,12 +88,12 @@ export default function Programs() {
 
             {/* Program Outcomes */}
             <div className="bg-secondary/20 rounded-lg p-12">
-              <h3 className="text-3xl font-bold text-primary mb-8 text-center" style={{ fontFamily: 'Poppins, sans-serif' }}>
+              <h3 className="text-3xl font-bold text-primary mb-8 text-center">
                 Program Outcomes
               </h3>
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h4 className="font-bold text-primary mb-3" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                  <h4 className="font-bold text-primary mb-3">
                     Skills Development
                   </h4>
                   <ul className="space-y-2 text-foreground">
@@ -118,7 +104,7 @@ export default function Programs() {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-bold text-primary mb-3" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                  <h4 className="font-bold text-primary mb-3">
                     Career Advancement
                   </h4>
                   <ul className="space-y-2 text-foreground">
@@ -137,12 +123,12 @@ export default function Programs() {
       {/* Program Modules */}
       <section className="bg-secondary/10 py-20 md:py-28">
         <div className="container">
-          <h2 className="text-4xl font-bold text-primary mb-16 text-center" style={{ fontFamily: 'Poppins, sans-serif' }}>
+          <h2 className="text-4xl font-bold text-primary mb-16 text-center">
             Program Modules
           </h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-white border border-secondary rounded-lg p-8">
-              <h3 className="text-xl font-bold text-primary mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
+              <h3 className="text-xl font-bold text-primary mb-4">
                 Module 1: Professional Foundations
               </h3>
               <p className="text-foreground">
@@ -150,7 +136,7 @@ export default function Programs() {
               </p>
             </div>
             <div className="bg-white border border-secondary rounded-lg p-8">
-              <h3 className="text-xl font-bold text-primary mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
+              <h3 className="text-xl font-bold text-primary mb-4">
                 Module 2: Technical Skills
               </h3>
               <p className="text-foreground">
@@ -158,7 +144,7 @@ export default function Programs() {
               </p>
             </div>
             <div className="bg-white border border-secondary rounded-lg p-8">
-              <h3 className="text-xl font-bold text-primary mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
+              <h3 className="text-xl font-bold text-primary mb-4">
                 Module 3: Leadership & Communication
               </h3>
               <p className="text-foreground">
@@ -166,7 +152,7 @@ export default function Programs() {
               </p>
             </div>
             <div className="bg-white border border-secondary rounded-lg p-8">
-              <h3 className="text-xl font-bold text-primary mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
+              <h3 className="text-xl font-bold text-primary mb-4">
                 Module 4: Internship & Mentorship
               </h3>
               <p className="text-foreground">
@@ -180,7 +166,7 @@ export default function Programs() {
       {/* CTA Section */}
       <section className="bg-primary text-white py-16 md:py-24">
         <div className="container text-center">
-          <h2 className="text-4xl font-bold mb-6" style={{ fontFamily: 'Poppins, sans-serif' }}>
+          <h2 className="text-4xl font-bold mb-6">
             Ready to Transform Your Career?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
@@ -199,20 +185,20 @@ export default function Programs() {
         <div className="container">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h4 className="font-bold mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>ELSMITH</h4>
+              <h4 className="font-bold mb-4">ELSMITH</h4>
               <p className="text-blue-100">Global Business and Workforce Advisory</p>
             </div>
             <div>
-              <h5 className="font-bold mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>Navigation</h5>
+              <h5 className="font-bold mb-4">Navigation</h5>
               <ul className="space-y-2 text-blue-100">
-                <li><Link href="/"><a className="hover:text-accent transition">Home</a></Link></li>
-                <li><Link href="/about"><a className="hover:text-accent transition">About</a></Link></li>
-                <li><Link href="/services"><a className="hover:text-accent transition">Services</a></Link></li>
-                <li><Link href="/programs"><a className="hover:text-accent transition">Programs</a></Link></li>
+                <li><Link href="/" className="hover:text-accent transition">Home</Link></li>
+                <li><Link href="/about" className="hover:text-accent transition">About</Link></li>
+                <li><Link href="/services" className="hover:text-accent transition">Services</Link></li>
+                <li><Link href="/programs" className="hover:text-accent transition">Programs</Link></li>
               </ul>
             </div>
             <div>
-              <h5 className="font-bold mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>Contact</h5>
+              <h5 className="font-bold mb-4">Contact</h5>
               <ul className="space-y-2 text-blue-100">
                 <li>Email: <a href="mailto:engage@elsmithconsulting.com" className="hover:text-accent transition">engage@elsmithconsulting.com</a></li>
                 <li>Phone: <a href="tel:+2348032004575" className="hover:text-accent transition">+234 803 200 4575</a></li>
@@ -220,7 +206,7 @@ export default function Programs() {
               </ul>
             </div>
             <div>
-              <h5 className="font-bold mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>Follow Us</h5>
+              <h5 className="font-bold mb-4">Follow Us</h5>
               <div className="flex gap-4">
                 <a href="#" className="text-blue-100 hover:text-accent transition">LinkedIn</a>
                 <a href="#" className="text-blue-100 hover:text-accent transition">Instagram</a>

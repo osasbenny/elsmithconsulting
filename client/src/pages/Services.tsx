@@ -66,27 +66,15 @@ export default function Services() {
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white border-b border-secondary">
         <div className="container flex items-center justify-between h-16">
-          <Link href="/">
-            <a className="text-2xl font-bold text-primary hover:text-accent transition" style={{ fontFamily: 'Poppins, sans-serif' }}>
-              ELSMITH
-            </a>
+          <Link href="/" className="text-2xl font-bold text-primary hover:text-accent transition" style={{ fontFamily: 'Poppins, sans-serif' }}>
+            ELSMITH
           </Link>
           <div className="hidden md:flex gap-8">
-            <Link href="/">
-              <a className="text-foreground hover:text-accent transition">Home</a>
-            </Link>
-            <Link href="/about">
-              <a className="text-foreground hover:text-accent transition">About</a>
-            </Link>
-            <Link href="/services">
-              <a className="text-foreground hover:text-accent transition font-bold">Services</a>
-            </Link>
-            <Link href="/programs">
-              <a className="text-foreground hover:text-accent transition">Programs</a>
-            </Link>
-            <Link href="/contact">
-              <a className="text-foreground hover:text-accent transition">Contact</a>
-            </Link>
+            <Link href="/" className="text-foreground hover:text-accent transition">Home</Link>
+            <Link href="/about" className="text-foreground hover:text-accent transition">About</Link>
+            <Link href="/services" className="text-foreground hover:text-accent transition font-bold">Services</Link>
+            <Link href="/programs" className="text-foreground hover:text-accent transition">Programs</Link>
+            <Link href="/contact" className="text-foreground hover:text-accent transition">Contact</Link>
           </div>
           <Link href="/contact">
             <Button className="bg-accent hover:bg-accent/90 text-accent-foreground">
@@ -99,9 +87,7 @@ export default function Services() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary to-blue-900 text-white py-20 md:py-28">
         <div className="container">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6" style={{ fontFamily: 'Poppins, sans-serif' }}>
-            Our Services
-          </h1>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">Our Services</h1>
           <p className="text-xl text-blue-100 max-w-3xl">
             Comprehensive advisory solutions tailored to drive organizational success and sustainable growth.
           </p>
@@ -121,7 +107,7 @@ export default function Services() {
                       <Icon className="w-20 h-20 text-accent" />
                     </div>
                     <div className="md:col-span-2">
-                      <h3 className="text-2xl font-bold text-primary mb-3" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                      <h3 className="text-2xl font-bold text-primary mb-3">
                         {service.title}
                       </h3>
                       <p className="text-foreground mb-6">
@@ -147,12 +133,12 @@ export default function Services() {
       {/* Why Choose Us */}
       <section className="bg-secondary/20 py-20 md:py-28">
         <div className="container">
-          <h2 className="text-4xl font-bold text-primary mb-16 text-center" style={{ fontFamily: 'Poppins, sans-serif' }}>
+          <h2 className="text-4xl font-bold text-primary mb-16 text-center">
             Why Choose ELSMITH
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg p-8 border border-secondary">
-              <h3 className="text-xl font-bold text-primary mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
+              <h3 className="text-xl font-bold text-primary mb-4">
                 Proven Expertise
               </h3>
               <p className="text-foreground">
@@ -160,7 +146,7 @@ export default function Services() {
               </p>
             </div>
             <div className="bg-white rounded-lg p-8 border border-secondary">
-              <h3 className="text-xl font-bold text-primary mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
+              <h3 className="text-xl font-bold text-primary mb-4">
                 Global Perspective
               </h3>
               <p className="text-foreground">
@@ -168,7 +154,7 @@ export default function Services() {
               </p>
             </div>
             <div className="bg-white rounded-lg p-8 border border-secondary">
-              <h3 className="text-xl font-bold text-primary mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>
+              <h3 className="text-xl font-bold text-primary mb-4">
                 Results-Driven Approach
               </h3>
               <p className="text-foreground">
@@ -182,7 +168,7 @@ export default function Services() {
       {/* CTA Section */}
       <section className="bg-primary text-white py-16 md:py-24">
         <div className="container text-center">
-          <h2 className="text-4xl font-bold mb-6" style={{ fontFamily: 'Poppins, sans-serif' }}>
+          <h2 className="text-4xl font-bold mb-6">
             Ready to Transform Your Organization?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
@@ -201,20 +187,20 @@ export default function Services() {
         <div className="container">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h4 className="font-bold mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>ELSMITH</h4>
+              <h4 className="font-bold mb-4">ELSMITH</h4>
               <p className="text-blue-100">Global Business and Workforce Advisory</p>
             </div>
             <div>
-              <h5 className="font-bold mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>Navigation</h5>
+              <h5 className="font-bold mb-4">Navigation</h5>
               <ul className="space-y-2 text-blue-100">
-                <li><Link href="/"><a className="hover:text-accent transition">Home</a></Link></li>
-                <li><Link href="/about"><a className="hover:text-accent transition">About</a></Link></li>
-                <li><Link href="/services"><a className="hover:text-accent transition">Services</a></Link></li>
-                <li><Link href="/programs"><a className="hover:text-accent transition">Programs</a></Link></li>
+                <li><Link href="/" className="hover:text-accent transition">Home</Link></li>
+                <li><Link href="/about" className="hover:text-accent transition">About</Link></li>
+                <li><Link href="/services" className="hover:text-accent transition">Services</Link></li>
+                <li><Link href="/programs" className="hover:text-accent transition">Programs</Link></li>
               </ul>
             </div>
             <div>
-              <h5 className="font-bold mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>Contact</h5>
+              <h5 className="font-bold mb-4">Contact</h5>
               <ul className="space-y-2 text-blue-100">
                 <li>Email: <a href="mailto:engage@elsmithconsulting.com" className="hover:text-accent transition">engage@elsmithconsulting.com</a></li>
                 <li>Phone: <a href="tel:+2348032004575" className="hover:text-accent transition">+234 803 200 4575</a></li>
@@ -222,7 +208,7 @@ export default function Services() {
               </ul>
             </div>
             <div>
-              <h5 className="font-bold mb-4" style={{ fontFamily: 'Poppins, sans-serif' }}>Follow Us</h5>
+              <h5 className="font-bold mb-4">Follow Us</h5>
               <div className="flex gap-4">
                 <a href="#" className="text-blue-100 hover:text-accent transition">LinkedIn</a>
                 <a href="#" className="text-blue-100 hover:text-accent transition">Instagram</a>

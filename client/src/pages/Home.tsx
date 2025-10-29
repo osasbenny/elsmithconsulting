@@ -8,27 +8,15 @@ export default function Home() {
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white border-b border-secondary">
         <div className="container flex items-center justify-between h-16">
-          <Link href="/">
-            <a className="text-2xl font-bold text-primary hover:text-accent transition">
-              ELSMITH
-            </a>
+          <Link href="/" className="text-2xl font-bold text-primary hover:text-accent transition" style={{ fontFamily: 'Poppins, sans-serif' }}>
+            ELSMITH
           </Link>
           <div className="hidden md:flex gap-8">
-            <Link href="/">
-              <a className="text-foreground hover:text-accent transition">Home</a>
-            </Link>
-            <Link href="/about">
-              <a className="text-foreground hover:text-accent transition">About</a>
-            </Link>
-            <Link href="/services">
-              <a className="text-foreground hover:text-accent transition">Services</a>
-            </Link>
-            <Link href="/programs">
-              <a className="text-foreground hover:text-accent transition">Programs</a>
-            </Link>
-            <Link href="/contact">
-              <a className="text-foreground hover:text-accent transition">Contact</a>
-            </Link>
+            <Link href="/" className="text-foreground hover:text-accent transition">Home</Link>
+            <Link href="/about" className="text-foreground hover:text-accent transition">About</Link>
+            <Link href="/services" className="text-foreground hover:text-accent transition">Services</Link>
+            <Link href="/programs" className="text-foreground hover:text-accent transition">Programs</Link>
+            <Link href="/contact" className="text-foreground hover:text-accent transition">Contact</Link>
           </div>
           <Link href="/contact">
             <Button className="bg-accent hover:bg-accent/90 text-accent-foreground">
@@ -189,20 +177,20 @@ export default function Home() {
         <div className="container">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h4 className="font-poppins font-bold mb-4">ELSMITH</h4>
+              <h4 className="font-bold mb-4">ELSMITH</h4>
               <p className="text-blue-100">Global Business and Workforce Advisory</p>
             </div>
             <div>
-              <h5 className="font-poppins font-bold mb-4">Navigation</h5>
+              <h5 className="font-bold mb-4">Navigation</h5>
               <ul className="space-y-2 text-blue-100">
-                <li><Link href="/"><a className="hover:text-accent transition">Home</a></Link></li>
-                <li><Link href="/about"><a className="hover:text-accent transition">About</a></Link></li>
-                <li><Link href="/services"><a className="hover:text-accent transition">Services</a></Link></li>
-                <li><Link href="/programs"><a className="hover:text-accent transition">Programs</a></Link></li>
+                <li><Link href="/" className="hover:text-accent transition">Home</Link></li>
+                <li><Link href="/about" className="hover:text-accent transition">About</Link></li>
+                <li><Link href="/services" className="hover:text-accent transition">Services</Link></li>
+                <li><Link href="/programs" className="hover:text-accent transition">Programs</Link></li>
               </ul>
             </div>
             <div>
-              <h5 className="font-poppins font-bold mb-4">Contact</h5>
+              <h5 className="font-bold mb-4">Contact</h5>
               <ul className="space-y-2 text-blue-100">
                 <li>Email: <a href="mailto:engage@elsmithconsulting.com" className="hover:text-accent transition">engage@elsmithconsulting.com</a></li>
                 <li>Phone: <a href="tel:+2348032004575" className="hover:text-accent transition">+234 803 200 4575</a></li>
@@ -210,7 +198,7 @@ export default function Home() {
               </ul>
             </div>
             <div>
-              <h5 className="font-poppins font-bold mb-4">Follow Us</h5>
+              <h5 className="font-bold mb-4">Follow Us</h5>
               <div className="flex gap-4">
                 <a href="#" className="text-blue-100 hover:text-accent transition">LinkedIn</a>
                 <a href="#" className="text-blue-100 hover:text-accent transition">Instagram</a>
