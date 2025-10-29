@@ -1,5 +1,6 @@
-import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import { Button } from "@/components/ui/button";
+import { MobileMenu } from "@/components/MobileMenu";
 import { ChevronRight, Mail, Phone, MapPin } from "lucide-react";
 import { useState } from "react";
 import { trpc } from "@/lib/trpc";
@@ -53,11 +54,14 @@ export default function Contact() {
             <Link href="/programs" className="text-foreground hover:text-accent transition">Programs</Link>
             <Link href="/contact" className="text-foreground hover:text-accent transition font-bold">Contact</Link>
           </div>
-          <Link href="/contact">
-            <Button className="bg-accent hover:bg-accent/90 text-accent-foreground">
-              Speak to Us Today
-            </Button>
-          </Link>
+          <div className="hidden md:block">
+            <Link href="/contact">
+              <Button className="bg-accent hover:bg-accent/90 text-accent-foreground">
+                Speak to Us Today
+              </Button>
+            </Link>
+          </div>
+          <MobileMenu />
         </div>
       </nav>
 

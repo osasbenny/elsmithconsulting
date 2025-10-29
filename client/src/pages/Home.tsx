@@ -1,6 +1,7 @@
-import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { ChevronRight, Briefcase, Users, TrendingUp, Award, Zap } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { MobileMenu } from "@/components/MobileMenu";
 
 export default function Home() {
   return (
@@ -18,11 +19,14 @@ export default function Home() {
             <Link href="/programs" className="text-foreground hover:text-accent transition">Programs</Link>
             <Link href="/contact" className="text-foreground hover:text-accent transition">Contact</Link>
           </div>
-          <Link href="/contact">
-            <Button className="bg-accent hover:bg-accent/90 text-accent-foreground">
-              Speak to Us Today
-            </Button>
-          </Link>
+          <div className="hidden md:block">
+            <Link href="/contact">
+              <Button className="bg-accent hover:bg-accent/90 text-accent-foreground">
+                Speak to Us Today
+              </Button>
+            </Link>
+          </div>
+          <MobileMenu />
         </div>
       </nav>
 

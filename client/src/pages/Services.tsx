@@ -1,5 +1,6 @@
-import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import { Button } from "@/components/ui/button";
+import { MobileMenu } from "@/components/MobileMenu";
 import { ChevronRight, Briefcase, Users, Award, TrendingUp, Zap } from "lucide-react";
 
 export default function Services() {
@@ -76,11 +77,14 @@ export default function Services() {
             <Link href="/programs" className="text-foreground hover:text-accent transition">Programs</Link>
             <Link href="/contact" className="text-foreground hover:text-accent transition">Contact</Link>
           </div>
-          <Link href="/contact">
-            <Button className="bg-accent hover:bg-accent/90 text-accent-foreground">
-              Speak to Us Today
-            </Button>
-          </Link>
+          <div className="hidden md:block">
+            <Link href="/contact">
+              <Button className="bg-accent hover:bg-accent/90 text-accent-foreground">
+                Speak to Us Today
+              </Button>
+            </Link>
+          </div>
+          <MobileMenu />
         </div>
       </nav>
 
