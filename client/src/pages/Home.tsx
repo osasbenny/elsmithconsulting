@@ -8,8 +8,8 @@ export default function Home() {
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-white border-b border-secondary">
         <div className="container flex items-center justify-between h-16">
-          <Link href="/" className="text-2xl font-bold text-primary hover:text-accent transition" style={{ fontFamily: 'Poppins, sans-serif' }}>
-            ELSMITH
+          <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition">
+            <img src="/logo.png" alt="ELSMITH Consulting" className="h-10 w-auto" />
           </Link>
           <div className="hidden md:flex gap-8">
             <Link href="/" className="text-foreground hover:text-accent transition">Home</Link>
