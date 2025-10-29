@@ -1,33 +1,228 @@
-import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { APP_LOGO, APP_TITLE, getLoginUrl } from "@/const";
-import { Streamdown } from 'streamdown';
+import { Link } from "wouter";
+import { ChevronRight, Briefcase, Users, TrendingUp, Award, Zap } from "lucide-react";
 
-/**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Workflow, Frontend Best Practices, Design Guide and Common Pitfalls
- */
 export default function Home() {
-  // The userAuth hooks provides authentication state
-  // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
-  let { user, loading, error, isAuthenticated, logout } = useAuth();
-
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
-
-  // Use APP_LOGO (as image src) and APP_TITLE if needed
-
   return (
-    <div className="min-h-screen flex flex-col">
-      <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
-      </main>
+    <div className="min-h-screen flex flex-col bg-white">
+      {/* Navigation */}
+      <nav className="sticky top-0 z-50 bg-white border-b border-secondary">
+        <div className="container flex items-center justify-between h-16">
+          <Link href="/">
+            <a className="text-2xl font-bold text-primary hover:text-accent transition">
+              ELSMITH
+            </a>
+          </Link>
+          <div className="hidden md:flex gap-8">
+            <Link href="/">
+              <a className="text-foreground hover:text-accent transition">Home</a>
+            </Link>
+            <Link href="/about">
+              <a className="text-foreground hover:text-accent transition">About</a>
+            </Link>
+            <Link href="/services">
+              <a className="text-foreground hover:text-accent transition">Services</a>
+            </Link>
+            <Link href="/programs">
+              <a className="text-foreground hover:text-accent transition">Programs</a>
+            </Link>
+            <Link href="/contact">
+              <a className="text-foreground hover:text-accent transition">Contact</a>
+            </Link>
+          </div>
+          <Link href="/contact">
+            <Button className="bg-accent hover:bg-accent/90 text-accent-foreground">
+              Speak to Us Today
+            </Button>
+          </Link>
+        </div>
+      </nav>
+
+      {/* Hero Banner */}
+      <section className="bg-gradient-to-br from-primary to-blue-900 text-white py-24 md:py-32">
+        <div className="container">
+          <div className="max-w-3xl">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+              Accelerating Growth. Enabling Excellence.
+            </h1>
+            <p className="text-xl text-blue-100 mb-8">
+              ELSMITH Consulting is a global business and workforce advisory firm dedicated to transforming organizations through strategic insights, leadership development, and innovative solutions.
+            </p>
+            <div className="flex gap-4">
+              <Link href="/about">
+                <Button className="bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-3">
+                  About Us
+                </Button>
+              </Link>
+              <Link href="/contact">
+                <Button variant="outline" className="border-white text-white hover:bg-white/10 px-6 py-3">
+                  Get Started <ChevronRight className="ml-2 w-4 h-4" />
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Services Highlights */}
+      <section className="py-20 md:py-28">
+        <div className="container">
+          <h2 className="text-4xl font-bold text-primary mb-4 text-center">
+            Our Core Services
+          </h2>
+          <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
+            Comprehensive advisory solutions tailored to drive organizational success and sustainable growth.
+          </p>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Service 1 */}
+            <div className="bg-secondary/30 border border-secondary rounded-lg p-8 hover:shadow-lg transition">
+              <Briefcase className="w-12 h-12 text-accent mb-4" />
+              <h3 className="text-xl font-bold text-primary mb-3">
+                Business & Workforce Advisory
+              </h3>
+              <p className="text-foreground">
+                Strategic guidance on organizational structure, workforce optimization, and business transformation.
+              </p>
+            </div>
+
+            {/* Service 2 */}
+            <div className="bg-secondary/30 border border-secondary rounded-lg p-8 hover:shadow-lg transition">
+              <Users className="w-12 h-12 text-accent mb-4" />
+              <h3 className="text-xl font-bold text-primary mb-3">
+                Executive Search & Outsourcing
+              </h3>
+              <p className="text-foreground">
+                Specialized recruitment and workforce outsourcing solutions for senior leadership positions.
+              </p>
+            </div>
+
+            {/* Service 3 */}
+            <div className="bg-secondary/30 border border-secondary rounded-lg p-8 hover:shadow-lg transition">
+              <Award className="w-12 h-12 text-accent mb-4" />
+              <h3 className="text-xl font-bold text-primary mb-3">
+                Leadership Development
+              </h3>
+              <p className="text-foreground">
+                High-impact learning programs designed to develop exceptional leaders and drive organizational culture.
+              </p>
+            </div>
+
+            {/* Service 4 */}
+            <div className="bg-secondary/30 border border-secondary rounded-lg p-8 hover:shadow-lg transition">
+              <TrendingUp className="w-12 h-12 text-accent mb-4" />
+              <h3 className="text-xl font-bold text-primary mb-3">
+                Talent Management & Succession Planning
+              </h3>
+              <p className="text-foreground">
+                Comprehensive talent strategies and succession frameworks to ensure organizational continuity.
+              </p>
+            </div>
+
+            {/* Service 5 */}
+            <div className="bg-secondary/30 border border-secondary rounded-lg p-8 hover:shadow-lg transition">
+              <Zap className="w-12 h-12 text-accent mb-4" />
+              <h3 className="text-xl font-bold text-primary mb-3">
+                Business Transformation & Process Re-engineering
+              </h3>
+              <p className="text-foreground">
+                End-to-end process optimization and digital transformation to enhance operational excellence.
+              </p>
+            </div>
+
+            {/* Service 6 */}
+            <div className="bg-secondary/30 border border-secondary rounded-lg p-8 hover:shadow-lg transition">
+              <Briefcase className="w-12 h-12 text-accent mb-4" />
+              <h3 className="text-xl font-bold text-primary mb-3">
+                License to Work™ Programme
+              </h3>
+              <p className="text-foreground">
+                Graduate employability programme designed to bridge the skills gap and prepare talent for the workplace.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Global Presence */}
+      <section className="bg-secondary/20 py-20 md:py-28">
+        <div className="container">
+          <h2 className="text-4xl font-bold text-primary mb-16 text-center">
+            Global Presence
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-primary mb-2">Lagos</h3>
+              <p className="text-foreground">Nigeria</p>
+            </div>
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-primary mb-2">London</h3>
+              <p className="text-foreground">United Kingdom</p>
+            </div>
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-primary mb-2">Dubai</h3>
+              <p className="text-foreground">United Arab Emirates</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-primary text-white py-16 md:py-24">
+        <div className="container text-center">
+          <h2 className="text-4xl font-bold mb-6">
+            Ready to Transform Your Organization?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Connect with our team of expert consultants to discuss how we can help drive your organization's growth and success.
+          </p>
+          <Link href="/contact">
+            <Button className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-3 text-lg">
+              Speak to Us Today
+            </Button>
+          </Link>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-primary text-white py-12 border-t border-blue-800">
+        <div className="container">
+          <div className="grid md:grid-cols-4 gap-8 mb-8">
+            <div>
+              <h4 className="font-poppins font-bold mb-4">ELSMITH</h4>
+              <p className="text-blue-100">Global Business and Workforce Advisory</p>
+            </div>
+            <div>
+              <h5 className="font-poppins font-bold mb-4">Navigation</h5>
+              <ul className="space-y-2 text-blue-100">
+                <li><Link href="/"><a className="hover:text-accent transition">Home</a></Link></li>
+                <li><Link href="/about"><a className="hover:text-accent transition">About</a></Link></li>
+                <li><Link href="/services"><a className="hover:text-accent transition">Services</a></Link></li>
+                <li><Link href="/programs"><a className="hover:text-accent transition">Programs</a></Link></li>
+              </ul>
+            </div>
+            <div>
+              <h5 className="font-poppins font-bold mb-4">Contact</h5>
+              <ul className="space-y-2 text-blue-100">
+                <li>Email: <a href="mailto:engage@elsmithconsulting.com" className="hover:text-accent transition">engage@elsmithconsulting.com</a></li>
+                <li>Phone: <a href="tel:+2348032004575" className="hover:text-accent transition">+234 803 200 4575</a></li>
+                <li><a href="tel:+447733717516" className="hover:text-accent transition">+44 7733 717516</a></li>
+              </ul>
+            </div>
+            <div>
+              <h5 className="font-poppins font-bold mb-4">Follow Us</h5>
+              <div className="flex gap-4">
+                <a href="#" className="text-blue-100 hover:text-accent transition">LinkedIn</a>
+                <a href="#" className="text-blue-100 hover:text-accent transition">Instagram</a>
+                <a href="#" className="text-blue-100 hover:text-accent transition">Twitter</a>
+              </div>
+            </div>
+          </div>
+          <div className="border-t border-blue-800 pt-8 text-center text-blue-100">
+            <p>&copy; 2025 ELSMITH Consulting. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
